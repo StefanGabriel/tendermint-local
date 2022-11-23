@@ -20,8 +20,6 @@ services:
       - LOG=${LOG:-tendermint.log}
     volumes:
       - ./build:/tendermint:Z
-    configs:
-      - /etc/tendermint/config-template.toml
     networks:
       localnet:
         ipv4_address: 193.167.10.3
@@ -36,8 +34,6 @@ services:
       - LOG=${LOG:-tendermint.log}
     volumes:
       - ./build:/tendermint:Z
-    configs:
-      - /etc/tendermint/config-template.toml
     networks:
       localnet:
         ipv4_address: 193.167.10.4
