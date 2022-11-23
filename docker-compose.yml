@@ -12,7 +12,7 @@ services:
     volumes:
       - ./build:/tendermint:Z
     networks:
-      localnet:
+      kvstore-maven_localnet:
         ipv4_address: 193.167.10.3
 
   node1:
@@ -26,5 +26,5 @@ services:
     volumes:
       - ./build:/tendermint:Z
     networks:
-      localnet:
+      kvstore-maven_localnet:
         ipv4_address: 193.167.10.4
