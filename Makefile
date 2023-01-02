@@ -47,10 +47,10 @@ endif
 # allow users to pass additional flags via the conventional LDFLAGS variable
 LD_FLAGS += $(LDFLAGS)
 
-# Process Docker environment varible TARGETPLATFORM 
+# Process Docker environment varible TARGETPLATFORM
 # in order to build binary with correspondent ARCH
 # by default will always build for linux/amd64
-TARGETPLATFORM ?= 
+TARGETPLATFORM ?=
 GOOS ?= linux
 GOARCH ?= amd64
 GOARM ?=
@@ -353,7 +353,7 @@ build_c-amazonlinux:
 
 # Run a 4-node testnet locally
 localnet-start: localnet-stop build-docker-localnode
-	@if ! [ -f build/node0/config/genesis.json ]; then docker run --rm -v $(CURDIR)/build:/tendermint:Z docker-registry.stefan-gabriel.com/tendermint/localnode testnet1 --config /etc/tendermint/config-template.toml --o . --starting-ip-address 193.167.10.2; fi
+	@if ! [ -f build/node0/config/genesis.json ]; then docker run --rm -v $(CURDIR)/build:/tendermint:Z docker-registry.stefan-gabriel.com/tendermint/localnode testnet --config /etc/tendermint/config-template.toml --o . --starting-ip-address 193.167.10.2; fi
 	docker-compose up
 .PHONY: localnet-start
 
