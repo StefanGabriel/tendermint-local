@@ -4,7 +4,7 @@ services:
   kvstore-maven:
     container_name: kvstore-maven
     restart: always
-    image: "docker-registry-priv.stefan-gabriel.com/kvstore-maven:2"
+    image: "docker-registry-priv.stefan-gabriel.com/kvstore-maven:4"
     ports:
       - "26658:26658"
     volumes:
