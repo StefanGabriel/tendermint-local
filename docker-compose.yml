@@ -29,7 +29,7 @@ services:
       - /home/stefan/tendermint-data/abci2:/tendermint-data
     networks:
       localnet:
-        ipv4_address: 193.167.10.10
+        ipv4_address: 193.167.10.11
 
   abci3:
     container_name: abci3
@@ -39,7 +39,7 @@ services:
       - /home/stefan/tendermint-data/abci3:/tendermint-data
     networks:
       localnet:
-        ipv4_address: 193.167.10.10
+        ipv4_address: 193.167.10.12
 
 
   node0:
